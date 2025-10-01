@@ -1,0 +1,156 @@
+.FlexyTable {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  padding-top: var(--spacing-lg);
+
+
+  table {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.-sm {
+    table {
+      // margin: var(--spacing-xs) auto;
+
+      th {
+        padding: 2px 4px;
+      }
+
+      td {
+        padding: 6px 4px;
+      }
+    }
+  }
+
+  &.is-scrollable:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 50px;
+    height: 100%;
+    border-radius: 10px 0 0 10px / 50% 0 0 50%;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+    content: '';
+  }
+
+  // the overflow-er
+  > div {
+    overflow-x: auto;
+
+    // forces scrollbar for webkit
+    ::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--site-ui-bg-light);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.15) inset;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--site-ui-border);
+      border-radius: 6px;
+    }
+  }
+
+  table, th, td {
+    border: 1px solid var(--site-ui-border);
+  }
+  
+  table {
+    // margin: var(--spacing-sm) auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: auto; // always let the data do the width'n
+
+    // &.show-line-breaks td {
+    //   white-space: pre;
+    // }
+    
+    th,	td {
+      padding: 6px 8px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    
+    th {
+      font-size: var(--f3);
+      // background: var(--site-ui-border);
+      font-weight: 900;
+      text-align: left;
+      white-space: nowrap;
+
+      &.center {
+        text-align: center;
+      }
+
+      &.right {
+        text-align: right;
+      }
+    }
+
+    td {
+      text-align: left;
+      white-space: nowrap;
+
+      &.center {
+        text-align: center;
+      }
+      
+      &.right {
+        text-align: right;
+      }
+    }
+
+    tr {
+      // background: blue;
+
+      &.today,
+      &.today.weekend {
+        background-color: rgba(255, 248, 0, 0.12); // Light Yellow
+        // background-color: rgba(106, 49, 251, 0.08); // Light Purple
+      }
+      
+      &.weekend {
+        // background-color: rgba(255, 248, 0, 0.12); // Light Yellow
+        background-color: rgba(106, 49, 251, 0.08); // Light Purple
+        // background-color: var(--site-ui-bg-light); // Light Purple
+      }
+    }
+
+    // tr:nth-child(odd) {
+    //   background: orange;
+    //   background: var(--site-ui-bg-light);
+    // }
+    
+    // tbody tr:nth-child(odd) {
+    //   background: var(--hopsquad-purple);
+    // }
+
+    td {
+      // font-size: var(--f1);
+      font-size: var(--f4);
+
+      &:first-child {
+        padding-left: var(--spacing-sm);
+      }
+
+      &.text {
+        // white-space: pre;
+
+        span {
+          display: block;
+          max-width: 50vw;
+          overflow: hidden;
+        }
+      }
+
+      .Tag {
+        vertical-align: middle;
+      }
+    }  
+  }
+}

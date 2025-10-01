@@ -1,0 +1,234 @@
+/* [[1]] _variables.scss */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
+
+// Variables
+:root {
+	// Breakpoint Settings
+	// ====
+	--breakpoint-xs: 400px;
+	--breakpoint-sm: 640px;
+	--breakpoint-md: 960px;
+	--breakpoint-lg: 1200px;
+	--breakpoint-xl: 1400px;
+
+	// Max Width Settings
+	// ====
+	--max-width-xs: 400px;
+	--max-width-sm: 600px;
+	--max-width-md: 800px;
+	--max-width-lg: 1000px;
+	--max-width-xl: 1200px;
+
+	// Grid Settings
+	// ====
+	--grid-gutter-base: 10;
+	--grid-gutter: #{var(--grid-gutter-base)}px;
+	--grid-gutter-half: #{calc(var(--grid-gutter-base) / 2)}px;
+	--grid-gutter-double: #{calc(var(--grid-gutter-base) * 2)}px;
+
+	// CSS Transition/Animation Variables
+	--easing-bezier: cubic-bezier(0.255, 0.000, 0.000, 1.000);
+	--easing-bezier2: cubic-bezier(0.19, 1, 0.22, 1);
+	--easing: ease-out;
+	--easing2: ease;
+	--duration: 700ms;
+
+
+	// Font Settings
+	// ====
+	// --sans-fallback: 'Helvetica Neue, Helvetica, Arial, sans-serif';
+	// --serif-fallback: 'Georgia, Times New Roman, Times, serif';
+	--sans-fallback: Avenir;
+	--serif-fallback: Avenir;
+
+	--test-font: Inter;
+
+	// --sans: 'Inter', #{var(--sans-fallback)};
+	// --serif: 'Italiana', #{var(--serif-fallback)};
+	// --heading: 'Italiana', #{var(--sans)};
+	// --labels: 'Inter', #{var(--sans)};
+	--sans: 'Inter';
+	--serif: 'Italiana';
+	--heading: 'Italiana';
+	--labels: 'Inter';
+
+	// Font Sizes
+	// ====
+	--f-mini: 8px;
+	--f-small: 10px;
+	--f1: 12px;
+	--f2: 14px;
+	--f3: 16px;
+	--f4: 20px;
+	--f5: 24px;
+	--f6: 32px;
+	--f7: 40px;
+	--f8: 48px;
+	--f9: 56px;
+	--f10: 60px;
+	--f11: 72px;
+	--f12: 80px;
+
+	// Font Weights
+	// ====
+	--fw1: 100;
+	--fw2: 200;
+	--fw3: 300;
+	--fw4: 400;
+	--fw5: 500;
+	--fw6: 600;
+	--fw7: 700;
+	--fw8: 800;
+	--fw9: 900;
+
+	// Spacing
+	// ====
+	--spacing-base: 8px;
+	--spacing-mini: 4px;
+	--spacing-xs: 8px;
+	--spacing-sm: 16px;
+	--spacing-md: 32px;
+	--spacing-lg: 48px;
+	--spacing-xl: 60px;
+
+	--site-wrapper-spacing: 24px;
+
+
+	--header-height: 60px;
+	--announcement-banner-height: 60px;
+	--announcement-banner-bg: #000;
+
+	// Base Type Settings
+	// ====
+	--base-font: var(--sans);
+	--base-font-size: var(--f3);
+	--base-font-weight: var(--fw4);
+	--base-line-height: 1.6;
+	--base-line-height: 1.8;
+	--base-letter-spacing: normal;
+
+
+	// Color Settings
+	// ====
+	--primary-color: #333;
+	--primary-color: #74491f;
+	--secondary-color: #2EA3F2;
+
+	--site-ui-primary-color: #333;
+	--site-ui-primary-color: #74491f;
+	--site-secondary-color: #2EA3F2;
+
+	--info-color: #2246c4;
+	--info-color-bright: #365FEF;
+	--info-icon-color: #063dff;
+	--info-shadow-color: #5077ff;
+	--info-bg-color: #d2dcff;
+	--info-border-color: #90a8ff;
+
+	// --success-color: #5FDC7B;
+	--success-color: #329148;
+	--success-color-bright: #5FDC7B;
+	--success-icon-color: #5FDC7B;
+	--success-shadow-color: #5FDC7B;
+	--success-bg-color: #d7ffe0;
+	--success-border-color: #bcf5c9;
+
+	--warning-color: #df4545;
+	--warning-color-bright: #FA3030;
+	--warning-icon-color: #e02424;
+	--warning-shadow-color: #cd4848;
+	--warning-bg-color: #fff1f1;
+	--warning-border-color: #ffc5c5;
+
+	// =====================================
+
+	--site-ui-icon: #BBC1E1;
+	--site-ui-border: #E4EAED;
+	--site-ui-border-light: #efefef;
+	--site-ui-border-inverted: #414141;
+	--site-ui-border-inverted-light: #3b3b3b;
+	--site-ui-border-radius-xs: 2px;
+	--site-ui-border-radius-sm: 4px;
+	--site-ui-border-radius-md: 8px;
+	--site-ui-border-radius-lg: 16px;
+	--site-ui-text: #333;
+	--site-ui-text-inverted: #fcfcfc;
+	--site-ui-text-light: #a0a0a0;
+	--site-ui-text-soft: #555555;
+	--site-ui-label: #8c98b4;
+	--site-ui-label-light: rgba(3, 27, 78, 0.4);
+	// --site-ui-bg: #ffffff;
+	--site-ui-bg: #FCFCFC;
+	--site-ui-bg-inverted: #333;
+	--site-ui-bg-light: #f9f9f9;
+	--site-ui-shadow: 0 2px 4px rgba(3, 27, 78, .05);
+	--site-ui-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+	--site-ui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+	--site-ui-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+	--site-ui-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+	--site-ui-shadow-2xl: 0 15px 50px -12px rgba(0, 0, 0, 0.2);
+
+	.dark-mode {
+		// Dark Mode
+		// White to black/Dark Gray Spectrum Levels
+
+		--site-ui-primary-color: #2EA3F2;
+		--site-secondary-color: #00c6cf;
+
+		--site-ui-dark-purple: #4251a9;
+
+		// Dark
+		--info-color: #99b0ff;
+		--info-icon-color: #365FEF;
+		--info-shadow-color: #365FEF;
+		--info-bg-color: #0d2474;
+		--info-border-color: #1131a4;
+
+		// Dark
+		--success-color: #76c98a;
+		--success-icon-color: #38a651;
+		--success-shadow-color: #38a651;
+		--success-bg-color: #002f0b;
+		--success-border-color: #005213;
+
+		// Dark
+		--warning-color: #ff6767;
+		--warning-icon-color: #b70c0c;
+		--warning-shadow-color: #b31e1e;
+		--warning-bg-color: #3d0000;
+		--warning-border-color: #620000;
+
+		--site-ui-icon: #7a7a7a;
+		--site-ui-border: #2d2d2d;
+		--site-ui-border-light: #3e3e3e;
+		--site-ui-border-inverted: #e0e0e0;
+		--site-ui-border-inverted-light: #f1f1f1;
+		--site-ui-text: #fcfcfc;
+		--site-ui-text-inverted: #333;
+		--site-ui-text-light: #797979;
+		--site-ui-text-soft: #d4d4d4;
+		--site-ui-bg: #333;
+		--site-ui-bg-inverted: #fcfcfc;
+		--site-ui-bg-light: #1f1f1f;
+		--site-ui-bg-light: var(--site-ui-gray-darker);
+	}
+}
+
+@media(min-width: 800px) {
+	:root {
+		--site-wrapper-spacing: var(--spacing-md);
+	}
+}
+
+
+@media(min-width: 1000px) {
+	:root {
+		--site-wrapper-spacing: var(--spacing-lg);
+	}
+}
+
+@media(min-width: 1200px) {
+	:root {
+		--site-wrapper-spacing: var(--spacing-xl);
+	}
+}

@@ -1,0 +1,164 @@
+.Button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 50px;
+	padding: 0 20px;
+
+	background-color: var(--primary-color);
+	// background-color: var(--site-ui-text);
+	font-family: var(--sans);
+	font-size: var(--f2);
+	font-weight: var(--fw5);
+	color: #ffffff;
+	border: 0;
+	border-radius: 100px;
+	box-shadow: 0 2px 4px rgba(3, 27, 78, .05);
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	white-space: nowrap;
+	user-select: none;
+
+	transition: opacity var(--duration) var(--easing-bezier2), background-color var(--duration) var(--easing-bezier2);
+	cursor: pointer;
+
+	/* new: make it a container */
+	// container-type: inline-size;
+	// container-name: button;
+	// overflow: hidden;
+	// white-space: nowrap;
+	// text-overflow: ellipsis;
+
+	/* Now apply truncation when its inline-size is below a threshold */
+	// @container button (max-width: 150px) {
+	// 	button {
+	// 		text-overflow: ellipsis;
+	// 	}
+	// }
+
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&--secondary {
+		color: var(--primary-color);
+		color: var(--site-ui-text);
+		background-color: var(--site-ui-bg);
+		border: 1px solid var(--site-ui-border);
+
+		&:hover {}
+	}
+
+	&--textOnly {
+		background-color: transparent;
+		color: var(--site-ui-text-light);
+		box-shadow: none;
+	}
+
+	&--video {
+		position: relative;
+		width: 60px;
+		height: 60px;
+		width: 50px;
+		height: 50px;
+		border-radius: 100px;
+		background-color: rgba(0,0,0,0.5);
+		background-color: var(--site-ui-text);
+		background-color: var(--site-ui-primary-color);
+
+
+		&::before {
+			content: '';
+			display: flex;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 100%;
+			// width: calc(100% + var(--spacing-sm));
+			// height: calc(100% + var(--spacing-sm));
+			background-color: rgba(0,0,0,0.2);
+			border-radius: 100px;
+			animation: playButtonPulse 3s ease infinite;
+		}
+	}
+
+	&--smallish {
+		height: 40px;
+	}
+
+	&--small {
+		padding: 0 16px;
+		height: 28px;
+		font-size: 12px;
+		line-height: 1;
+	}
+
+	&--xs {
+		padding: 0 8px;
+		height: 28px;
+		font-size: 12px;
+	}
+
+	&--autoHeight {
+		height: auto;
+		align-self: stretch;
+	}
+
+	&--full {
+		display: flex;
+		width: 100%;
+		// box-shadow: 0px 3px 7px rgba(29,0,101,0.5);
+	}
+
+	&--fullSite {
+		display: flex;
+		width: calc(100% - (2 * var(--site-wrapper-spacing)));
+		// box-shadow: 0px 3px 7px rgba(29,0,101,0.5);
+	}
+
+
+	&.disabled,
+	&:disabled {
+		filter: grayscale(1);
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
+
+	&.hidden {
+		display: none;
+	}
+}
+
+.-purple-border {
+	border-color: var(--primary-color);
+}
+
+.-no-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.-padding-sm {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+
+@keyframes playButtonPulse {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	
+	50% {
+		transform: translate(-50%, -50%) scale(1.3);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}

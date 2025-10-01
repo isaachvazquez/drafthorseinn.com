@@ -1,0 +1,37 @@
+// Basic HTML Structure for Expandable Item
+// <div class="Expandable -show-preview">
+//   <div class="Expandable-content">
+//     <p>content</p>
+//   </div>
+// </div>
+
+.Expandable {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s;
+
+  .Expandable-content { overflow: hidden; }
+}
+
+.Expandable.active {
+  grid-template-rows: 1fr;
+}
+
+
+.Expandable-metaContent {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  // justify-content: flex-end;
+  justify-content: space-between;
+  padding: var(--spacing-sm);
+  border-top: 1px solid var(--app-ui-border);
+
+  button {
+    margin-left: var(--spacing-sm);
+  }
+
+  button:first-child {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,27 @@
+:root {
+  --grid-columns: 12;
+  --grid-column-gap: var(--spacing-xs);
+  --grid-row-gap: var(--spacing-xs);
+  --grid-column-span: 1;
+  --grid-row-span: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  grid-column-gap: var(--grid-column-gap);
+  grid-row-gap: var(--grid-row-gap);
+
+  > * {
+    grid-column: span var(--grid-column-span);
+    grid-row: span var(--grid-row-span);
+  }
+
+  @media(max-width: 800px) {
+    --grid-columns: 1;
+  }
+}
+
+// Add this to child elements (aka grid items)
+// grid-column: span <number-of-columns>;
+// ex: grid-column: span 1;

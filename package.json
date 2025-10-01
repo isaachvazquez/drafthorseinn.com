@@ -1,0 +1,31 @@
+{
+  "name": "drafhorseinnarcadia.com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.11.4",
+    "@nuxtjs/sanity": "^1.13.3",
+    "@pinia/nuxt": "^0.11.2",
+    "@sanity/client": "^7.7.0",
+    "@sanity/image-url": "^1.1.0",
+    "groq": "^3.74.1",
+    "keen-slider": "^6.8.6",
+    "luxon": "^3.7.2",
+    "nuxt": "^3.17.7",
+    "pinia": "^3.0.3",
+    "plyr": "^3.7.8",
+    "sanity": "^4.0.0",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

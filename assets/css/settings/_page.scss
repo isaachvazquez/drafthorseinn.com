@@ -1,0 +1,77 @@
+.menu-active .Page {
+	filter: blur(5px);
+}
+
+.Page {
+	padding-top: var(--spacing-xl);
+	min-height: 75vh;
+	transition: filter 0.3s ease;
+	background-color: var(--site-ui-bg);
+
+	&.menu-active {
+		// &::before {
+
+		// }
+	}
+
+
+	h1 {
+		font-size: clamp(var(--f1), 8vw, var(--f10));
+	}
+
+}
+
+.PageContent {
+	container: page-content / inline-size;
+	margin: 0 auto;
+	padding-bottom: var(--spacing-lg);
+
+	// --------------------------------------
+	// FYI: You need all of this to make the 
+	// "break-out" QuoteSection Styles work
+	// --------------------------------------
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: center;
+
+	// width: var(--max-width-md);
+	// max-width: 100%;
+	// --------------------------------------
+
+	h1 {
+		width: 100%;
+		max-width: var(--max-width-sm);
+		text-align: left;
+	}
+
+	// > * {
+	// 	max-width: var(--max-width-sm);
+	// }
+
+	@media(max-width: 800px) {
+		> * {
+			padding-left: var(--site-wrapper-spacing);
+			padding-right: var(--site-wrapper-spacing);
+		}
+	}
+}
+
+section {
+	position: relative;
+  // margin: var(--spacing-xl) var(--site-wrapper-spacing);
+  margin: var(--spacing-xl) auto;
+	padding-left: var(--site-wrapper-spacing);
+	padding-right: var(--site-wrapper-spacing);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.full {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

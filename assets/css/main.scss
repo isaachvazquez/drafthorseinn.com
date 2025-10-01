@@ -1,0 +1,18 @@
+// Vendor CSS
+
+// Variables & Mixins
+@use "./assets/css/settings/_variables";
+
+// Global Styles
+@use "./assets/css/settings/_print";
+@use "./assets/css/settings/_base";
+@use "./assets/css/settings/_utility";
+@use "./assets/css/settings/_grid";
+@use "./assets/css/settings/_page";
+
+// UI Styles
+@use "./assets/css/ui/button";
+@use "./assets/css/ui/expandable";
+@use "./assets/css/ui/flexy-table";
+@use "./assets/css/ui/icons";
+@use "./assets/css/ui/modal";
