@@ -326,8 +326,8 @@
 			line-height: 1;
 			// letter-spacing: -0.04em;
 			text-transform: none;
-			font-weight: var(--fw8);
-			font-weight: var(--fw5);
+			font-weight: var(--fw6);
+			// font-weight: var(--fw5);
 
 			@media(max-width: 640px) {
 				// font-size: var(--f6);

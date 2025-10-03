@@ -139,6 +139,11 @@
 		// background-size: cover;
 		// background-repeat: no-repeat;
 
+		&.dark-mode {
+			background-color: #000;
+			color: #fff;
+		}
+
     // h2 {
     //   color: var(--site-ui-text-inverted);
     // }
