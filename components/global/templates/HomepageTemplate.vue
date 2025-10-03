@@ -9,7 +9,7 @@
 		<!-- <section class="full">
 			<KeenSlider />
 		</section> -->
-		<section class="HomepageHero" :style="`background-image: url('${homepage.bgImage.asset ? $urlFor(homepage.bgImage.asset).width(1500).height(1000).url() : ''}')`">
+		<section class="HomepageHero parallax" :style="`background-image: url('${homepage.bgImage.asset ? $urlFor(homepage.bgImage.asset).width(1500).height(1000).url() : ''}')`">
 			<video
 				v-if="homepage.bgVideo && homepage.bgVideo.url"
 				:key="homepage.bgVideo.url"
@@ -75,6 +75,7 @@
 </template>
 
 <script setup>
+	import { onMounted } from 'vue';
 	import { buildUrl } from '~/utils/buildUrl';
 	import { useModalStore } from '@/stores/modal';
 	import ImageComponent from '@/components/ImageComponent.vue';
@@ -106,6 +107,31 @@
       "strike-through": "s",
     },
   }
+
+	const parallaxSections = ref([]);
+
+
+	function isInViewport(el) {
+		const rect = el.getBoundingClientRect();
+		return rect.bottom > 0 && rect.top < window.innerHeight;
+	}
+
+	function handleParallax() {
+		parallaxSections.value.forEach(section => {
+			if (isInViewport(section)) {
+				const speed = parseFloat(section.dataset.speed) || 0.5;
+				const offset = window.scrollY - section.offsetTop;
+				section.style.backgroundPositionY = offset * speed + "px";
+			}
+		});
+	}
+
+	onMounted(() => {
+		parallaxSections.value = document.querySelectorAll('.parallax');
+		window.addEventListener('scroll', handleParallax);
+		window.addEventListener('resize', handleParallax);
+		handleParallax(); // initial call
+	});
 </script>
 
 <style lang="scss" scoped>
@@ -143,7 +169,8 @@
 		// max-width: none;
 
 		// background-image: url('https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUybzhza2pnemx3ZmdveW1vMnZuMjZ5N3hvcnhwMG9pN3A4ZGlzbHRpeiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xUA7b4arnbo3THfzi0/source.gif');
-		background-position: center;
+		// background-position: center;
+		background-position: top;
 		background-size: cover;
 		background-repeat: no-repeat;
 
