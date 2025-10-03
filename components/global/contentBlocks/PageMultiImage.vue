@@ -300,6 +300,10 @@
 		--image-aspect-ratio: 1 / 1;
 		margin: 0 auto;
 		margin-top: var(--spacing-lg);
+
+		width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
 		// max-width: var(--max-width-lg);
 		opacity: 0;
 		transition: opacity 0.3s 0.5s ease;

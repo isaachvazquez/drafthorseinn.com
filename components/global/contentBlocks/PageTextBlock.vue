@@ -55,12 +55,17 @@
 		// 	h6 { font-size: clamp(var(--f3), 8vw, var(--f4)); }
 		// }
     
+		// :deep() {
+
+		// }
+
 		a,
 		a:not([class]),
 		a[class=""],
-		a[class] {
-			text-decoration: underline !important;
-			color: tomato;
+		a[class],
+		:deep(a) {
+			font-weight: bold;
+			text-decoration: underline;
 
 			&:hover {
 				text-decoration: none;

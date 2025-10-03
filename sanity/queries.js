@@ -64,6 +64,8 @@ const linkReferenceForBlockContent = `
 export const collectionsQuery = defineQuery(`*[_type == "collections"]{
   _id,
   title,
+	heading,
+	subheading,
   "slug": slug.current,
   template,
 	"coverImage": coverImage{
@@ -81,6 +83,8 @@ export const collectionQuery = defineQuery(`*[_type == "collections" && slug.cur
   _id,
 	_type,
   title,
+  heading,
+  subheading,
   "slug": slug.current,
   template,
 	"coverImage": coverImage{

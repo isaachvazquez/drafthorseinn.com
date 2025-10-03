@@ -179,6 +179,7 @@
 				// height: 100%;
 				max-height: calc(100% - var(--spacing-xl));
 				overflow: auto;
+				overflow-x: hidden;
 
 				.SiteNavigation-listItem {
 					margin-bottom: var(--spacing-md);

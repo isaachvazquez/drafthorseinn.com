@@ -94,9 +94,13 @@
 			grid-template-columns: var(--spacing-xs) repeat(6, 1fr) var(--spacing-xs);
 			grid-row-gap: var(--spacing-md);
 
+			&.overlap {
+				margin-bottom: -100px;
+			}
+
 			.BlockCTA-image, 
 			.BlockCTA-content {
-				grid-column: 1 / -1;
+				grid-column: 1 / -1 !important;
 			}
 			
 			.BlockCTA-image {
@@ -130,7 +134,6 @@
 					width: calc(100% - (2 * var(--spacing-sm)));
 					transform: translate(-50%, -100px);
 					padding: var(--spacing-md);
-					padding: var(--spacing-sm);
 				}
 			}
 			
@@ -158,6 +161,7 @@
 			grid-row: 1;
       border-radius: 16px;
       overflow: hidden;
+			align-self: center;
 
       img {
         width: 100%;

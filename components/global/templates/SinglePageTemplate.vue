@@ -6,7 +6,7 @@
 			<h1 v-else>{{ document.title }}</h1>
 			<!-- <p>{{ document.subheading }}</p> -->
 		</section>
-		<section class="SinglePageContent full">
+		<section class="SinglePageContent">
 			<ContentBuilder :blocks="document.pageContent" v-if="document.pageContent && document.pageContent.length > 0" />
 		</section>
   </main>
@@ -31,11 +31,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: var(--spacing-xl) var(--site-wrapper-spacing);
+		padding: calc(var(--header-height) + var(--spacing-lg)) var(--site-wrapper-spacing) var(--spacing-lg);
 		min-height: 35vh;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-color: #000; // Makes for a cleaner look while loading
 
 		&::before {
 			content: '';
@@ -52,6 +53,8 @@
 			position: relative;
 			z-index: 1;
 			color: #fff;
+			max-width: var(--max-width-md);
+			text-align: center;
 		}
 	}
 
@@ -72,11 +75,11 @@
 		// max-width: 100%;
 		// --------------------------------------
 
-		h1 {
-			width: 100%;
-			max-width: var(--max-width-sm);
-			text-align: left;
-		}
+		// h1 {
+		// 	width: 100%;
+		// 	max-width: var(--max-width-sm);
+		// 	text-align: left;
+		// }
 
 		// > * {
 		// 	max-width: var(--max-width-sm);

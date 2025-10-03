@@ -42,13 +42,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: var(--spacing-xl) var(--site-wrapper-spacing);
+		padding: calc(var(--header-height) + var(--spacing-lg)) var(--site-wrapper-spacing) var(--spacing-lg);
 		min-height: 35vh;
 		// background-color: var(--site-ui-primary-color);
 		// background-image: url('/default-collection-landing-bg.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-color: #000; // Makes for a cleaner look while loading
 
 		&::before {
 			content: '';
@@ -65,6 +66,8 @@
 			position: relative;
 			z-index: 1;
 			color: #fff;
+			max-width: var(--max-width-md);
+			text-align: center;
 		}
 	}
 
