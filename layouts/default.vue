@@ -26,11 +26,6 @@
   const mobileMenu = useMobileMenuStore();
 	// const config = useRuntimeConfig();
 
-	// // because it’s prefixed with NUXT_PUBLIC_, it lives under config.public
-	// const devMode = config.public.devMode; // cast to boolean if needed
-
-	// console.log('Dev Mode?', devMode);
-
 	const body = ref(null);
 
 
