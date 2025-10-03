@@ -117,6 +117,9 @@
 	}
 
 	function handleParallax() {
+		// Turn Parallax OFF for mobile
+		if (window.innerWidth <= 768) return;
+
 		parallaxSections.value.forEach(section => {
 			if (isInViewport(section)) {
 				const speed = 0.5;
@@ -169,10 +172,16 @@
 		// max-width: none;
 
 		// background-image: url('https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUybzhza2pnemx3ZmdveW1vMnZuMjZ5N3hvcnhwMG9pN3A4ZGlzbHRpeiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xUA7b4arnbo3THfzi0/source.gif');
-		// background-position: center;
-		background-position: top;
+		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+
+		// This is so the image starts at the top then
+		// scrolls through the center as you scroll past it
+		&.parallax {
+			background-position: top;
+		}
 
 		&::before {
 			content: '';
