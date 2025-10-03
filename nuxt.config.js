@@ -3,6 +3,9 @@ export default {
   compatibilityDate: "2024-11-01",
   ssr: true,
   nitro: { preset: 'netlify' },
+	devServer: {
+		port: 3000
+	},
   devtools: {
     enabled: true,
     timeline: {
