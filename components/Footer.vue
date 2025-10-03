@@ -1,5 +1,5 @@
 <template>
-  <footer class="Footer">
+  <footer class="Footer dark-mode">
     <!-- Footer Bottom -->
     <div class="Footer-top" v-if="footer.navLinks" :style="{ '--footer-links-column-count': footer.navLinks.filter(l => l.active).length }">
       
@@ -140,8 +140,7 @@
 		// background-repeat: no-repeat;
 
 		&.dark-mode {
-			background-color: #000;
-			color: #fff;
+			color: #fff; // this is only for the logo
 		}
 
     // h2 {
