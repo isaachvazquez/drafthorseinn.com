@@ -119,7 +119,7 @@
 	function handleParallax() {
 		parallaxSections.value.forEach(section => {
 			if (isInViewport(section)) {
-				const speed = parseFloat(section.dataset.speed) || 0.5;
+				const speed = 0.5;
 				const offset = window.scrollY - section.offsetTop;
 				section.style.backgroundPositionY = offset * speed + "px";
 			}
