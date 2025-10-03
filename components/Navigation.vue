@@ -141,6 +141,7 @@
 			justify-content: flex-start;
 			padding: var(--site-wrapper-spacing);
 			padding-top: calc(var(--site-wrapper-spacing) + var(--spacing-xl));
+			padding-bottom: calc(var(--site-wrapper-spacing) + var(--spacing-xl));
 			position: fixed;
 			width: 100%;
 			height: 100vh;
